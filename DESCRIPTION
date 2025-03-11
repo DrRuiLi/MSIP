@@ -1,18 +1,19 @@
 Package: MSIP
 Type: Package
-Title: Mass Spectrometry based Isotopomers parsing
+Title: Mass Spectrometry based Isotopomers Parsing
 Version: 1.0.0
 Authors@R: c(
     person(
       "Li", "Rui",
-      email = "lirui@example.com",
-      role = c("aut", "cre")
+      email = "lirui3@shanghaitech.edu.cn",
+      role = c("aut", "cre"),
+      comment = c(ORCID = "0000-0002-3199-287X")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: Analyze isotopomers of metabolites using MS/MS data
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://drruili.github.io/MSIP/
 Config/Needs/website: rmarkdown
+RoxygenNote: 7.3.2

@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   articles/intro: intro.html
   articles/MSIP: MSIP.html
-last_built: 2025-03-11T05:17Z
+last_built: 2025-03-11T07:25Z
 urls:
   reference: https://drruili.github.io/MSIP/reference
   article: https://drruili.github.io/MSIP/articles

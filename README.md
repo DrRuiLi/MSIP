@@ -1,3 +1,1 @@
-#MSIP
-
- Mass specrometry based isotopomer parsing
+#Mass Spectrometry based Isotopomers Parsing (MSIP)
