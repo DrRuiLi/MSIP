@@ -1,0 +1,14 @@
+---
+title: "Introduction of MSIP"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MSIP)
+```

@@ -1,11 +1,11 @@
 Package: MSIP
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Mass Spectrometry based Isotopomers parsing
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Li", "Rui",
+      email = "lirui@example.com",
       role = c("aut", "cre")
     )
   )
@@ -15,3 +15,4 @@ License: What license is it under?
 Encoding: UTF-8
 LazyData: true
 URL: https://drruili.github.io/MSIP/
+Config/Needs/website: rmarkdown

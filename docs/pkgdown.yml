@@ -1,8 +1,10 @@
 pandoc: '3.2'
 pkgdown: 2.1.1
 pkgdown_sha: ~
-articles: {}
-last_built: 2025-03-10T10:03Z
+articles:
+  articles/intro: intro.html
+  articles/MSIP: MSIP.html
+last_built: 2025-03-11T05:17Z
 urls:
   reference: https://drruili.github.io/MSIP/reference
   article: https://drruili.github.io/MSIP/articles

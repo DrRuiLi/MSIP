@@ -1,0 +1,20 @@
+---
+title: "MSIP"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Mass specrometry based isotopomer parsing
+
+# Background
+
+# Atom tracing map
+
+# MSE Spectra 
+
+# Isotopomer solve
