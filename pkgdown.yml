@@ -3,8 +3,10 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   articles/intro: intro.html
+  articles/MFNA: MFNA.html
   articles/MSIP: MSIP.html
-last_built: 2025-03-12T07:40Z
+  articles/toclg: toclg.html
+last_built: 2025-03-12T12:33Z
 urls:
   reference: https://drruili.github.io/MSIP/reference
   article: https://drruili.github.io/MSIP/articles
