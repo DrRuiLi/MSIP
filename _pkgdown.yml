@@ -1,22 +1,5 @@
 url: https://drruili.github.io/MSIP/
 template:
   bootstrap: 5
-navbar:
-  title: MyPackage
-  type: default
-  left:
-  - text: Home
-    href: index.html
-  - text: Get Started
-    href: articles/getting-started.html
-  - text: Vignettes
-    menu:
-    - text: Introduction
-      href: articles/intro.html
-    - text: Advanced Usage
-      href: articles/advanced.html
-  right:
-  - text: GitHub
-    icon: fa-github
-    href: https://github.com/yourusername/yourpackage
+  assets: vignettes/figures
 

@@ -1,0 +1,32 @@
+---
+title: "Three one carbon labeled glucose Project"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# **Introduction**
+This project show MSIP analysis in a data set from three type of one carbon labeled glucose tracer.
+The data set is acquired from isotopic glucose traced cell samples, we use three type of tracer: 
+1-^13^C Glucose, 2-^13^C Glucose and 3-^13^C Glucose to trace 293 cell line for 24h, 
+and collect the cell samples for MSIP analysis.
+
+<div style="text-align: center;">
+  ![Experiment design ](../man/figures/toclg_workflow.png){width=50%}
+</div>
+
+# **Result Interpretation**
+
+We use ShinyAPP to interactively present the original MS data and the process of MSIP
+
+## 1. 
+
+
+
+
+
