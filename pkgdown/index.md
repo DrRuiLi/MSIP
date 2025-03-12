@@ -1,8 +1,5 @@
 ---
 title: "Home"
-output:
-  pkgdown::html_page:
-    toc: true
 ---
 
 
@@ -25,6 +22,8 @@ To boost comprehensive  metabolic flux analysis ( MFA ) based on **Isotopomer**.
 • ***Isotopomers*** are defined as molecules having the same number of each isotopic atom, but differing in their positions. The term isotopomer is a portmanteau of ‘isotope’ and ‘isomer’.
 
 
+
+
 ![ ](man/figures/isotopomer.png)
 
 
@@ -32,9 +31,17 @@ To boost comprehensive  metabolic flux analysis ( MFA ) based on **Isotopomer**.
 
 ---
 
-## **Demo**
+In the complicated biological metabolic network, 
+some of metabolic process could not be reflected in the isotopologues, 
+especailly when mulitple reactions generating the same isotopologue but distinct isotopomers.
 
----
 
-## How to use
+
+![*Cai, F., et al. (2023). "Comprehensive isotopomer analysis of glutamate and aspartate in small tissue samples." Cell Metabolism 35(10): 1830-1843.e1835.*](man/figures/CM_isotopomer.png)
+
+
+
+
+
+
 
