@@ -5,8 +5,10 @@ articles:
   articles/intro: intro.html
   articles/MFNA: MFNA.html
   articles/MSIP: MSIP.html
+  articles/msip_shiny_demo: msip_shiny_demo.html
+  articles/msip_validation: msip_validation.html
   articles/toclg: toclg.html
-last_built: 2025-03-12T09:20Z
+last_built: 2025-03-13T16:26Z
 urls:
   reference: https://drruili.github.io/MSIP/reference
   article: https://drruili.github.io/MSIP/articles

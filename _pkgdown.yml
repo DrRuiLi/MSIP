@@ -2,4 +2,8 @@ url: https://drruili.github.io/MSIP/
 template:
   bootstrap: 5
   assets: vignettes/figures
+home:
+  links:
+  - text: GitHub Repository
+    href: https://github.com/DrRuiLi/MSIP
 

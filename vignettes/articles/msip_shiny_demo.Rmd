@@ -1,0 +1,119 @@
+---
+title: "MSIP Shiny GUI"
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+<div style="text-align: center;">
+  ![MSIP GUI](../man/figures/msip_shiny_example.png){width=100%}
+</div>
+
+## Select interesting data
+
+---
+
+Click **Metabolites**, **Samples**, and **Isotopologues** to select interested data.
+
+The pannel of **MS data** will show the MS data according to selection.
+
+The pannel of **MSIP analysis process and result** will show the key data.
+
+## MS data
+
+---
+
+The pannel of **MS data** show the MS2 spectrum acquired from unlabeled (upper) and labeled (lower) metabolites, isotopic distribution of isotopologues (right-top) and fragment  (right-bottom)
+
+<div style="text-align: center;">
+  ![MSIP GUI](../man/figures/msip_shiny_spectra.png){width=100%}
+</div>
+
+In biological sample, the MS2 spectrum come from both tracer labeled isotopologues and natrual isotopologues, the the right-top pie-plot show how much the tracer labeled isotopologues contribute to this MS2 spectrum
+
+The unlabeled MS2 spectrum show fragments with single peak (M+0), but labeled MS2 show fragments with multiple isotopic peaks (eg. M+0, M+1, M+2, et al). Zoom out and click one peak to show the  information, annotation and isotopic distribution of fragments, the right-bottom pie-plot show corresponding ratio of isotopic distribution.
+
+
+
+## MSIP analysis
+
+---
+
+### Atom map
+
+The **Atom map** show the possible structure of fragment (right) and how atoms of fragment map to the position in metabolite molecule (left).MSIP take all possible structures and maps in equal probability for analysis.
+
+
+
+<div style="text-align: center;">
+  ![Atom map](../man/figures/msip_shiny_atom_map.png){width=100%}
+</div>
+
+
+
+### FAR map
+
+The **Fragment-Atom-Ratio map** is integrated from Atom map and isotopic distribution of fragments. This **FAR map** containing all information required for isotopomers analysis.
+
+
+
+<div style="text-align: center;">
+  ![FAR map](../man/figures/msip_shiny_FARMAP.png){width=100%}
+</div>
+
+
+Each row show a FG (fragments group, collection of fragments with same formula and m/z), the probability of atom in metabolites molecule map to the FG, the ratio of isotopic distribution and intensity of the FG.
+
+Drag the threshold bar to set intensity and atom map certainty threshold to determine which FG to include in MSIP analysis.
+
+
+
+### Isotopomers
+
+The panel of **Isotopomers** show all possible isotopomers and their structure analyzed by MSIP.
+
+
+<div style="text-align: center;">
+  ![Isotopomers](../man/figures/msip_shiny_isotopomers.png){width=100%}
+</div>
+
+
+
+
+
+
+
+The left table show all possible isotopomers and their probability (proportion in the isotopologue). The probability are divided equally from FSIS if some of isotopomers are mixed in one FSIS (FSIS is isotopomers can not be discriminated due to insufficient fragments information, see xxx for more detail). 
+
+The right panel show structure of selected isotopomer, the border-highlight indicate which atoms labeled in this isotopomer.
+
+
+### Atom label probability
+
+This panel show the atom index (Canonicalizing Number) and position in the metabolite molecule.
+
+The atom label probabilities are integrated from multiple isotopmers. 
+
+
+<div style="text-align: center;">
+  ![Atom label probability](../man/figures/msip_shiny_atom_prob.png){width=80%}
+</div>
+
+### Natural distribution
+
+This panel show the correlation between MSIP-predicted probability and natural-distributed ratio of FSIS.
+
+If the the MS2 data is totally contributed by natural isotopologues (such as acquired from non-traced sample), it should containing all possible isotopomers with equal probability. Therefore the probability of FSIS should be determined by the fraction of isotopomers count. This feature could be utilized for MSIp validation, see [MSIP validation](articles/msip_validation.html) for more detial
+
+
+
+<div style="text-align: center;">
+  ![Natural distribution](../man/figures/msip_shiny_natural.png){width=60%}
+</div>
+
+
+
