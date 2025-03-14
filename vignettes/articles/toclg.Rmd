@@ -20,12 +20,11 @@ and collect the cell samples for MSIP analysis.
   ![Experiment design ](../man/figures/toclg_workflow.png){width=50%}
 </div>
 
-# **Result Interpretation**
+# **Result**
 
 We use ShinyAPP to interactively present the original MS data and the process of MSIP
 
-## 1. 
-
+Access [Three one carbon labeled glucose](http://47.116.220.22/).
 
 
 

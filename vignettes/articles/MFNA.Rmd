@@ -9,6 +9,76 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MSIP)
-```
+# **Introduction**
+
+Metabolic Flux Network Analysis (MFNA) is designed for interpret the complicated isotopomers data. 
+
+It construct a metabolic reaction network based on [KEGG reaction](https://www.genome.jp/kegg/reaction/) database, simulate atom transfer in the reaction and trace isotope source in isotopomers. Therefore MFNA could take all known metabolic reaction in consideration to perform metabolic flux network analysis.
+
+Now it has been competent for discovering the reaction path from given isotopic tracer to isotopomer. It is still developing to integrate MSIP and MFNA to calculate metabolic flux.
+
+
+# **Metabolic Flux Network Analysis**
+
+## Atom transfer in KEGG reaction 
+
+We collect metabolic reactions and encoding them as metabolic reaction network.
+
+For every reaction, the constructed network consist of nodes (metabolties and reaction) and directed edges (from substrate to reaction to product).
+
+<div style="text-align: center;">
+  ![AA](../man/figures/mfn_reaction_network.png){width=70%}
+  <br>
+  <p style="font-size: 10px;">KEGG reaction network</p>
+</div>
+
+For every reaction node, we encoding atom transfer to model the transfer of atoms between metabolites during metabolic reactions.
+This is archieved by [RXNMapper](https://www.science.org/doi/10.1126/sciadv.abe4166).
+
+<div style="text-align: center;">
+  ![AA](../man/figures/mfn_atom_transfer.png){width=70%}
+  <br>
+  <p style="font-size: 10px;">Atom transfer</p>
+</div>
+
+
+## Network diffusion for isotope tracing
+
+By initializing a metabolite node as tracer, and performing atom transfer recursively, we could simulate the metabolic process in a network diffsuion manner.
+
+When a reaction node is trigerred, the atom transfer will check all isotopomers status of substrate, and output all possible isotopomers of product.
+
+
+<div style="text-align: center;">
+  ![AA](../man/figures/mfn_diffusion.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Network diffusion </p>
+</div>
+
+Therefore we could simulate all possible isotopomers and elaborate how they are generated from the tracer.
+
+<div style="text-align: center;">
+  ![AA](../man/figures/mfn_path_demo.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Reaction path of pyruvate isotopomers</p>
+</div>
+
+## Shiny GUI
+
+To clearly comprehensively understanding the metabolic network and reaction path, we design a ShinyAPP to present:
+[Metabolic Flux Network from glucose to GSH](http://47.116.220.22:8304/) 
+
+
+<div style="text-align: center;">
+  ![AA](../man/figures/mfn_shiny.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">MFNA Shiny GUI</p>
+</div>
+
+The left panel show the metabolic flux network. The right-top panel show atom transfer and isotopomer structure.
+The right-bottom table show all possible isotopomers and its generation path.
+
+Click reaction node to view atom transfer, click a metabolite node to view its possible isotopomers, click a isotopomer to view its structure.
+
+
+

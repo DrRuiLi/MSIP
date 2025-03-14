@@ -30,12 +30,12 @@ The pannel of **MSIP analysis process and result** will show the key data.
 The pannel of **MS data** show the MS2 spectrum acquired from unlabeled (upper) and labeled (lower) metabolites, isotopic distribution of isotopologues (right-top) and fragment  (right-bottom)
 
 <div style="text-align: center;">
-  ![MSIP GUI](../man/figures/msip_shiny_spectra.png){width=100%}
+  ![MS data](../man/figures/msip_shiny_spectra.png){width=100%}
 </div>
 
-In biological sample, the MS2 spectrum come from both tracer labeled isotopologues and natrual isotopologues, the the right-top pie-plot show how much the tracer labeled isotopologues contribute to this MS2 spectrum
+In biological sample, the MS2 spectrum come from both of tracer-labeled isotopologues and natrual isotopologues, the the right-top pie-plot show how much the tracer-labeled isotopologues contribute to this MS2 spectrum
 
-The unlabeled MS2 spectrum show fragments with single peak (M+0), but labeled MS2 show fragments with multiple isotopic peaks (eg. M+0, M+1, M+2, et al). Zoom out and click one peak to show the  information, annotation and isotopic distribution of fragments, the right-bottom pie-plot show corresponding ratio of isotopic distribution.
+The unlabeled MS2 spectrum show fragments with single peak (M+0), but labeled MS2 show fragments with multiple isotopic peaks (e.g., M+0, M+1, M+2, etc). Zoom out and click one peak to show the  information, annotation and isotopic distribution of fragments, the right-bottom pie-plot show corresponding ratio of isotopic distribution.
 
 
 

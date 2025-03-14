@@ -9,12 +9,55 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Mass specrometry based isotopomer parsing
+# MSdev
 
-# Background
+MSIP is designed based on MSdev, a platform for metabolomics data analysis and methodology development.  
 
-# Atom tracing map
 
-# MSE Spectra 
+<div style="text-align: center;">
+  ![MSdev degisn](../man/figures/msdev_design.png){width=60%}
+  <br>
+  <p style="font-size: 10px;">MSdev design</p>
+</div>
 
-# Isotopomer solve
+MSdev integrate, extend and develop lots of MS data analysis, chemical calculation tools and database, which is nessesary for MSIP and other advance metabolic method. 
+
+
+
+<div style="text-align: center;">
+  ![MSdev architecture](../man/figures/MSdev_structure.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">MSdev architecture</p>
+</div>
+
+Install MSdev from github:
+
+(Not public available until our article publised)
+
+```{r,  eval=FALSE}
+  devtools::install_github("DrRuiLi/MSCC")
+  devtools::install_github("DrRuiLi/MSdb")
+  devtools::install_github("DrRuiLi/MSdev")
+
+```
+
+
+# MSIP
+
+Install MSIP from github:
+
+(Not public available until our article publised)
+
+```{r,  eval=FALSE}
+  devtools::install_github("DrRuiLi/MSIP")
+```
+
+Running MSIP shinyAPP:
+
+```{r,  eval=FALSE}
+  library(MSIP)
+  data(msdev.13C1)
+  MSIP_shiny_start(msdev.13C1)
+```
+
+

@@ -6,4 +6,21 @@ home:
   links:
   - text: GitHub Repository
     href: https://github.com/DrRuiLi/MSIP
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - articles
+    right:
+    - github
+    - lightswitch
+  components:
+    articles:
+      text: Articles
+      menu:
+      - text: MSIP Shiny GUI
+        href: articles/msip_shiny_demo.html
+      - text: Metabolic Flux Network Analysis
+        href: articles/MFNA.html
 
