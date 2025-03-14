@@ -10,7 +10,8 @@
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="MSIP">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
+<meta property="og:title" content="MSIP">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -30,23 +31,15 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="active nav-item"><a class="nav-link" href="../articles/MSIP.html">Get started</a></li>
-<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/intro.html">Introduction of MSIP</a></li>
+<li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
     <li><a class="dropdown-item" href="../articles/MFNA.html">Metabolic Flux Network Analysis</a></li>
-    <li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
-    <li><a class="dropdown-item" href="../articles/msip_validation.html">MSIP validation</a></li>
-    <li><a class="dropdown-item" href="../articles/toclg.html">Three one carbon labeled glucose Project</a></li>
   </ul>
 </li>
       </ul>
-<ul class="navbar-nav">
-<li class="nav-item"><form class="form-inline" role="search">
- <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
-</form></li>
-      </ul>
+<ul class="navbar-nav"></ul>
 </div>
 
 
@@ -69,24 +62,42 @@
     
     
 <div class="section level2">
-<h2 id="mass-specrometry-based-isotopomer-parsing">Mass specrometry based isotopomer parsing<a class="anchor" aria-label="anchor" href="#mass-specrometry-based-isotopomer-parsing"></a>
+<h2 id="msdev">MSdev<a class="anchor" aria-label="anchor" href="#msdev"></a>
 </h2>
+<p>MSIP is designed based on MSdev, a platform for metabolomics data
+analysis and methodology development.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/msdev_design.png" style="width:60.0%" alt="MSdev degisn"><br><p style="font-size: 10px;">
+MSdev design
+</p>
+</div>
+<p>MSdev integrate, extend and develop lots of MS data analysis,
+chemical calculation tools and database, which is nessesary for MSIP and
+other advance metabolic method.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/MSdev_structure.png" style="width:100.0%" alt="MSdev architecture"><br><p style="font-size: 10px;">
+MSdev architecture
+</p>
+</div>
+<p>Install MSdev from github:</p>
+<p>(Not public available until our article publised)</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSCC"</span><span class="op">)</span></span>
+<span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSdb"</span><span class="op">)</span></span>
+<span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSdev"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="background">Background<a class="anchor" aria-label="anchor" href="#background"></a>
+<h2 id="msip">MSIP<a class="anchor" aria-label="anchor" href="#msip"></a>
 </h2>
-</div>
-<div class="section level2">
-<h2 id="atom-tracing-map">Atom tracing map<a class="anchor" aria-label="anchor" href="#atom-tracing-map"></a>
-</h2>
-</div>
-<div class="section level2">
-<h2 id="mse-spectra">MSE Spectra<a class="anchor" aria-label="anchor" href="#mse-spectra"></a>
-</h2>
-</div>
-<div class="section level2">
-<h2 id="isotopomer-solve">Isotopomer solve<a class="anchor" aria-label="anchor" href="#isotopomer-solve"></a>
-</h2>
+<p>Install MSIP from github:</p>
+<p>(Not public available until our article publised)</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSIP"</span><span class="op">)</span></span></code></pre></div>
+<p>Running MSIP shinyAPP:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://drruili.github.io/MSIP/">MSIP</a></span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">msdev.13C1</span><span class="op">)</span></span>
+<span>  <span class="fu">MSIP_shiny_start</span><span class="op">(</span><span class="va">msdev.13C1</span><span class="op">)</span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
