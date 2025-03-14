@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>MSIP Shiny GUI • MSIP</title>
+<title>MSIP Shiny GUI Usage • MSIP</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><link href="../extra.css" rel="stylesheet">
-<meta property="og:title" content="MSIP Shiny GUI">
+<meta property="og:title" content="MSIP Shiny GUI Usage">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -34,8 +34,10 @@
 <li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
+<li><a class="dropdown-item" href="../articles/intro.html">Introduction of MSIP</a></li>
+    <li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
     <li><a class="dropdown-item" href="../articles/MFNA.html">Metabolic Flux Network Analysis</a></li>
+    <li><a class="dropdown-item" href="../articles/toclg.html">Three One Carbon Labeled Glucose Project</a></li>
   </ul>
 </li>
       </ul>
@@ -52,7 +54,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
 
-      <h1>MSIP Shiny GUI</h1>
+      <h1>MSIP Shiny GUI Usage</h1>
             
       
 
@@ -150,7 +152,8 @@ isotopomers and their structure analyzed by MSIP.</p>
 (proportion in the isotopologue). The probability are divided equally
 from FSIS if some of isotopomers are mixed in one FSIS (FSIS is
 isotopomers can not be discriminated due to insufficient fragments
-information, see xxx for more detail).</p>
+information, see <a href="articles/intro.html#isotopomers-analysis">Isotopomers analysis</a>
+for more detail).</p>
 <p>The right panel show structure of selected isotopomer, the
 border-highlight indicate which atoms labeled in this isotopomer.</p>
 </div>
@@ -176,8 +179,8 @@ and natural-distributed ratio of FSIS.</p>
 (such as acquired from non-traced sample), it should containing all
 possible isotopomers with equal probability. Therefore the probability
 of FSIS should be determined by the fraction of isotopomers count. This
-feature could be utilized for MSIp validation, see <a href="articles/msip_validation.html">MSIP validation</a> for more
-detial</p>
+feature could be utilized for MSIP validation.
+<!-- see [MSIP validation](articles/msip_validation.html) for more detial --></p>
 <div style="text-align: center;">
 <div class="float">
 <img src="../reference/figures/msip_shiny_natural.png" style="width:60.0%" alt="Natural distribution"><div class="figcaption">Natural distribution</div>

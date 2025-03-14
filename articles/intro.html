@@ -31,11 +31,13 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../articles/MSIP.html">Get started</a></li>
-<li class="nav-item dropdown">
+<li class="active nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
-<li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
+<li><a class="dropdown-item" href="../articles/intro.html">Introduction of MSIP</a></li>
+    <li><a class="dropdown-item" href="../articles/msip_shiny_demo.html">MSIP Shiny GUI</a></li>
     <li><a class="dropdown-item" href="../articles/MFNA.html">Metabolic Flux Network Analysis</a></li>
+    <li><a class="dropdown-item" href="../articles/toclg.html">Three One Carbon Labeled Glucose Project</a></li>
   </ul>
 </li>
       </ul>
@@ -61,9 +63,105 @@
 
     
     
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://drruili.github.io/MSIP/">MSIP</a></span><span class="op">)</span></span></code></pre></div>
-  </main>
+<div class="section level2">
+<h2 id="workflow">
+<strong>Workflow</strong><a class="anchor" aria-label="anchor" href="#workflow"></a>
+</h2>
+<p>The main workflow for MSIP containing 3 steps:</p>
+<ol style="list-style-type: decimal">
+<li>Construct atom tracing map based on MS fragmentation model.</li>
+<li>Acquire Multi-CE spectra and parse MS data to Fragment-Atom-Ratio
+map.</li>
+<li>Construct isotopomers contribution matrix and solve isotopomers by
+Non-linear program.</li>
+</ol>
+<div style="text-align: center;">
+<img src="../reference/figures/workflow.png" style="width:100.0%" alt="AA"><br><p style="font-size: 10px;">
+MSIP workflow
+</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="msip">
+<strong>MSIP</strong><a class="anchor" aria-label="anchor" href="#msip"></a>
+</h2>
+<div class="section level3">
+<h3 id="atom-tracing-map">
+<strong>Atom Tracing Map</strong><a class="anchor" aria-label="anchor" href="#atom-tracing-map"></a>
+</h3>
+<p>Based on a MS fragmentation model (<a href="https://cfmid.wishartlab.com/" class="external-link">CFM</a>), we develop a model to
+trace atoms in the process of MS fragmentation for a give metabolite
+molecule structure (SMILES).</p>
+<p>Using this model, we could calculate the probability of fragments
+containing any atoms in the original molecule.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/msip_atm.png" style="width:100.0%" alt="AA"><br><p style="font-size: 10px;">
+Atom tracing map
+</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="fragment-atom-ratio-map">
+<strong>Fragment-Atom-Ratio Map</strong><a class="anchor" aria-label="anchor" href="#fragment-atom-ratio-map"></a>
+</h3>
+<p>To acquire detailed fragments information, we use a multi-CE scan
+strategy in MS analysis.</p>
+<p>The atom map and isotopic distribution of fragments are integrated as
+a Fragment-Atom-Ratio Map for isotopomers analysis.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/msip_farmap.png" style="width:100.0%" alt="AA"><br><p style="font-size: 10px;">
+Fragment-Atom-Ratio map
+</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="isotopomers-analysis">
+<strong>Isotopomers analysis</strong><a class="anchor" aria-label="anchor" href="#isotopomers-analysis"></a>
+</h3>
+<p>To analyze isotopomers, we first simulate all possible isotopomers
+and construct a contribution matrix, which represent how much isotopomer
+contribute to labeled fragments.</p>
+<p>In the practical experiment, not all the isotopmers could be solved
+by detected fragments. In some of situations, some atoms are always
+bundled in the MS fragmentation, therefore couldn’t be discriminated
+just by MS data.</p>
+<p>Reflected in the FAR map, some of isotopomers show the same pattern
+of contribution to all labeled fragments (see Figure C). We define these
+isotopomers as Fragment Split Isotopomers Set (FSIS) to prevent
+mathematical non-solvability.</p>
+<p>These FISS and their contribution matirx to FG are then converted to
+equation set, which represent the contribution of FSIS leading to
+detected isotopic distribution of Fragments. Using Nonlinear
+Programming, we could solve out the probability of FSIS.</p>
+<p>Finally, the proportion of natural isotopomers are calculated and
+deducted. We could calculated the proportion of labeled isotopomers.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/msip_isotopomer.png" style="width:100.0%" alt="AA"><br><p style="font-size: 10px;">
+Isotopomers analysis
+</p>
+</div>
+<div style="text-align: center;">
+<img src="../reference/figures/msip_QP.png" style="width:50.0%" alt="AA"><br><p style="font-size: 10px;">
+Nonlinear programming to solve isotopomers
+</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="result-of-msip">
+<strong>Result of MSIP</strong><a class="anchor" aria-label="anchor" href="#result-of-msip"></a>
+</h3>
+<p>Using MSIP, we could discovery multiple isotopomers and calculated
+their proportion in the isotopolugue, or in total labeled form of the
+metabolite.</p>
+<div style="text-align: center;">
+<img src="../reference/figures/msip_result.png" style="width:100.0%" alt="AA"><br><p style="font-size: 10px;">
+MSIP result example
+</p>
+</div>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
