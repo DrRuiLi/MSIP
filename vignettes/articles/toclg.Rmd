@@ -22,7 +22,7 @@ and collect the cell samples for MSIP analysis.
 
 # **Result**
 
-We use ShinyAPP to interactively present the original MS data and the process of MSIP
+We use ShinyAPP to interactively present the original MS data and the analysis of MSIP
 
 Access [Three one carbon labeled glucose](http://47.116.220.22/).
 

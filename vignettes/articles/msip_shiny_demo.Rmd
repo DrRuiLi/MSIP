@@ -1,5 +1,5 @@
 ---
-title: "MSIP Shiny GUI"
+title: "MSIP Shiny GUI Usage"
 ---
 
 ```{r, include = FALSE}
@@ -87,7 +87,7 @@ The panel of **Isotopomers** show all possible isotopomers and their structure a
 
 
 
-The left table show all possible isotopomers and their probability (proportion in the isotopologue). The probability are divided equally from FSIS if some of isotopomers are mixed in one FSIS (FSIS is isotopomers can not be discriminated due to insufficient fragments information, see xxx for more detail). 
+The left table show all possible isotopomers and their probability (proportion in the isotopologue). The probability are divided equally from FSIS if some of isotopomers are mixed in one FSIS (FSIS is isotopomers can not be discriminated due to insufficient fragments information, see [Isotopomers analysis](articles/intro.html#isotopomers-analysis) for more detail). 
 
 The right panel show structure of selected isotopomer, the border-highlight indicate which atoms labeled in this isotopomer.
 
@@ -107,8 +107,8 @@ The atom label probabilities are integrated from multiple isotopmers.
 
 This panel show the correlation between MSIP-predicted probability and natural-distributed ratio of FSIS.
 
-If the the MS2 data is totally contributed by natural isotopologues (such as acquired from non-traced sample), it should containing all possible isotopomers with equal probability. Therefore the probability of FSIS should be determined by the fraction of isotopomers count. This feature could be utilized for MSIp validation, see [MSIP validation](articles/msip_validation.html) for more detial
-
+If the the MS2 data is totally contributed by natural isotopologues (such as acquired from non-traced sample), it should containing all possible isotopomers with equal probability. Therefore the probability of FSIS should be determined by the fraction of isotopomers count. This feature could be utilized for MSIP validation.
+<!-- see [MSIP validation](articles/msip_validation.html) for more detial -->
 
 
 <div style="text-align: center;">

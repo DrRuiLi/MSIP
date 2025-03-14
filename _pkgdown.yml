@@ -4,6 +4,8 @@ template:
   assets: vignettes/figures
 home:
   links:
+  - text: Personal Page
+    href: https://drruili.github.io/
   - text: GitHub Repository
     href: https://github.com/DrRuiLi/MSIP
 navbar:
@@ -19,8 +21,12 @@ navbar:
     articles:
       text: Articles
       menu:
+      - text: Introduction of MSIP
+        href: articles/intro.html
       - text: MSIP Shiny GUI
         href: articles/msip_shiny_demo.html
       - text: Metabolic Flux Network Analysis
         href: articles/MFNA.html
+      - text: Three One Carbon Labeled Glucose Project
+        href: articles/toclg.html
 

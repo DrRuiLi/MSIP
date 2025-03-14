@@ -9,6 +9,85 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MSIP)
-```
+
+
+# **Workflow**
+
+The main workflow for MSIP containing 3 steps: 
+
+1. Construct atom tracing map based on MS fragmentation model.
+2. Acquire Multi-CE spectra and parse MS data to Fragment-Atom-Ratio map.
+3. Construct isotopomers contribution matrix and solve isotopomers by Non-linear program. 
+
+<div style="text-align: center;">
+  ![AA](../man/figures/workflow.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">MSIP workflow</p>
+</div>
+
+# **MSIP**
+
+## **Atom Tracing Map**
+
+Based on a MS fragmentation model ([CFM](https://cfmid.wishartlab.com/)), we develop a model to trace atoms in the process of MS fragmentation for a give metabolite molecule structure (SMILES). 
+
+Using this model, we could calculate the probability of fragments containing any atoms in the original molecule.
+
+
+<div style="text-align: center;">
+  ![AA](../man/figures/msip_atm.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Atom tracing map</p>
+</div>
+
+
+## **Fragment-Atom-Ratio Map**
+
+To acquire detailed fragments information, we use a multi-CE scan strategy in MS analysis. 
+
+The atom map and isotopic distribution of fragments are integrated as a Fragment-Atom-Ratio Map for isotopomers analysis. 
+
+<div style="text-align: center;">
+  ![AA](../man/figures/msip_farmap.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Fragment-Atom-Ratio map</p>
+</div>
+
+
+## **Isotopomers analysis**
+
+To analyze isotopomers, we first simulate all possible isotopomers and construct a contribution matrix, which represent how much isotopomer contribute to labeled fragments. 
+
+In the practical experiment, not all the isotopmers could be solved by detected fragments. In some of situations, some atoms are always bundled in the MS fragmentation, therefore couldn't be discriminated just by MS data. 
+
+Reflected in the FAR map, some of isotopomers show the same pattern of contribution to all labeled fragments (see Figure C). We define these isotopomers as Fragment Split Isotopomers Set (FSIS) to prevent mathematical non-solvability.
+
+These FISS and their contribution matirx to FG are then converted to equation set, which represent the contribution of FSIS leading to detected isotopic distribution of Fragments. Using Nonlinear Programming, we could solve out the probability of FSIS.
+
+Finally, the proportion of natural isotopomers are calculated and deducted. We could calculated the proportion of labeled isotopomers.
+
+<div style="text-align: center;">
+  ![AA](../man/figures/msip_isotopomer.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Isotopomers analysis</p>
+</div>
+
+
+
+<div style="text-align: center;">
+  ![AA](../man/figures/msip_QP.png){width=50%}
+  <br>
+  <p style="font-size: 10px;">Nonlinear programming to solve isotopomers</p>
+</div>
+
+
+## **Result of MSIP**
+
+Using MSIP, we could discovery multiple isotopomers and calculated their proportion in the isotopolugue, or in total labeled form of the metabolite. 
+
+
+<div style="text-align: center;">
+  ![AA](../man/figures/msip_result.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">MSIP result example</p>
+</div>
