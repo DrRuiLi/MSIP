@@ -64,8 +64,12 @@
     
     
 <div class="section level2">
-<h2 id="msdev">MSdev<a class="anchor" aria-label="anchor" href="#msdev"></a>
+<h2 id="dependancy">
+<strong>Dependancy</strong><a class="anchor" aria-label="anchor" href="#dependancy"></a>
 </h2>
+<div class="section level3">
+<h3 id="msdev">MSdev<a class="anchor" aria-label="anchor" href="#msdev"></a>
+</h3>
 <p>MSIP is designed based on MSdev, a platform for metabolomics data
 analysis and methodology development.</p>
 <div style="text-align: center;">
@@ -88,15 +92,38 @@ MSdev architecture
 <span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSdb"</span><span class="op">)</span></span>
 <span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSdev"</span><span class="op">)</span></span></code></pre></div>
 </div>
+<div class="section level3">
+<h3 id="cfm-docker">CFM docker<a class="anchor" aria-label="anchor" href="#cfm-docker"></a>
+</h3>
+<p>see <a href="https://cfmid.wishartlab.com/" class="external-link">CFM</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  docker pull wishartlab<span class="sc">/</span>cfmid</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="rxnmapper">RXNMapper<a class="anchor" aria-label="anchor" href="#rxnmapper"></a>
+</h3>
+<p>see <a href="https://github.com/rxn4chemistry/rxnmapper" class="external-link">RXNMapper</a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  conda create <span class="sc">-</span>n rxnmapper python<span class="ot">=</span><span class="fl">3.6</span> <span class="sc">-</span>y</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  conda activate rxnmapper</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  pip install rxnmapper</span></code></pre></div>
+</div>
+</div>
 <div class="section level2">
-<h2 id="msip">MSIP<a class="anchor" aria-label="anchor" href="#msip"></a>
+<h2 id="install">
+<strong>Install</strong><a class="anchor" aria-label="anchor" href="#install"></a>
 </h2>
 <p>Install MSIP from github:</p>
 <p>(Not public available until our article publised)</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span>  <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"DrRuiLi/MSIP"</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="usage">
+<strong>Usage</strong><a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>Running MSIP shinyAPP:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://drruili.github.io/MSIP/">MSIP</a></span><span class="op">)</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">msdev.13C1</span><span class="op">)</span></span>
 <span>  <span class="fu">MSIP_shiny_start</span><span class="op">(</span><span class="va">msdev.13C1</span><span class="op">)</span></span></code></pre></div>
