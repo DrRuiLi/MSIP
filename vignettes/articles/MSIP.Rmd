@@ -9,7 +9,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# MSdev
+# **Dependancy**
+
+## MSdev
 
 MSIP is designed based on MSdev, a platform for metabolomics data analysis and methodology development.  
 
@@ -41,8 +43,30 @@ Install MSdev from github:
 
 ```
 
+## CFM docker
 
-# MSIP
+see [CFM](https://cfmid.wishartlab.com/)
+
+```{r,  eval=FALSE}
+
+  docker pull wishartlab/cfmid
+
+```
+
+
+## RXNMapper
+
+see [RXNMapper](https://github.com/rxn4chemistry/rxnmapper)
+
+```{r,  eval=FALSE}
+
+  conda create -n rxnmapper python=3.6 -y
+  conda activate rxnmapper
+  pip install rxnmapper
+
+```
+
+# **Install**
 
 Install MSIP from github:
 
@@ -51,6 +75,9 @@ Install MSIP from github:
 ```{r,  eval=FALSE}
   devtools::install_github("DrRuiLi/MSIP")
 ```
+
+# **Usage**
+
 
 Running MSIP shinyAPP:
 

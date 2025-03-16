@@ -8,9 +8,9 @@ title: "Home"
 MSIP is designed for **M**ass **S**pecrometry based **I**sotopomer **P**arsing. 
 To boost comprehensive  metabolic flux analysis ( MFA ) based on **Isotopomer**.
 
-Access our demo dataset of project [Three one carbon labeled glucose](http://47.116.220.22/) for a practical biological application.
+Access our demo dataset of project [Three one carbon labeled glucose](http://47.116.220.22:8303/) for a practical biological application.
 
-We also designed a visual tool for isotopomers understanding, 
+We also designed a visual tool **MFNA** for isotopomers understanding, 
 see [Metabolic Flux Network Analysis](articles/MFNA.html) for more detail,
 and [Metabolic Flux Network from glucose to GSH](http://47.116.220.22:8304) for demo 
 

@@ -13,9 +13,11 @@ knitr::opts_chunk$set(
 
 Metabolic Flux Network Analysis (MFNA) is designed for interpret the complicated isotopomers data. 
 
-It construct a metabolic reaction network based on [KEGG reaction](https://www.genome.jp/kegg/reaction/) database, simulate atom transfer in the reaction and trace isotope source in isotopomers. Therefore MFNA could take all known metabolic reaction in consideration to perform metabolic flux network analysis.
+A simply demo: [Metabolic Flux Network from glucose to GSH](http://47.116.220.22:8304/) 
 
-Now it has been competent for discovering the reaction path from given isotopic tracer to isotopomer. It is still developing to integrate MSIP and MFNA to calculate metabolic flux.
+We construct a metabolic reaction network based on [KEGG reaction](https://www.genome.jp/kegg/reaction/) database, simulate atom transfer in the reaction and trace isotope source in isotopomers. Therefore MFNA could take all known metabolic reaction in consideration to perform metabolic flux network analysis.
+
+Now it has been competent for discovering the reaction path from given isotopic tracer to isotopomers. It is still under development to integrate MSIP and MFNA to calculate metabolic flux.
 
 
 # **Metabolic Flux Network Analysis**

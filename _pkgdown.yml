@@ -8,6 +8,8 @@ home:
     href: https://drruili.github.io/
   - text: GitHub Repository
     href: https://github.com/DrRuiLi/MSIP
+  Contact:
+  - text: lirui3@shanghaitech.edu.cn
 navbar:
   structure:
     left:

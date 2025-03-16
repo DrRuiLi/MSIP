@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
 
 <div style="text-align: center;">
   ![MSIP GUI](../man/figures/msip_shiny_example.png){width=100%}
+   <br>
+  <p style="font-size: 10px;">MSIP GUI</p>
 </div>
 
 ## Select interesting data
@@ -31,9 +33,11 @@ The pannel of **MS data** show the MS2 spectrum acquired from unlabeled (upper) 
 
 <div style="text-align: center;">
   ![MS data](../man/figures/msip_shiny_spectra.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">MS data</p>
 </div>
 
-In biological sample, the MS2 spectrum come from both of tracer-labeled isotopologues and natrual isotopologues, the the right-top pie-plot show how much the tracer-labeled isotopologues contribute to this MS2 spectrum
+In biological sample, the MS2 spectrum come from both of tracer-labeled isotopologues and natrual isotopologues, the right-top pie-plot show how much the tracer-labeled isotopologues contribute to this MS2 spectrum
 
 The unlabeled MS2 spectrum show fragments with single peak (M+0), but labeled MS2 show fragments with multiple isotopic peaks (e.g., M+0, M+1, M+2, etc). Zoom out and click one peak to show the  information, annotation and isotopic distribution of fragments, the right-bottom pie-plot show corresponding ratio of isotopic distribution.
 
@@ -51,6 +55,8 @@ The **Atom map** show the possible structure of fragment (right) and how atoms o
 
 <div style="text-align: center;">
   ![Atom map](../man/figures/msip_shiny_atom_map.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Atom map</p>
 </div>
 
 
@@ -63,6 +69,8 @@ The **Fragment-Atom-Ratio map** is integrated from Atom map and isotopic distrib
 
 <div style="text-align: center;">
   ![FAR map](../man/figures/msip_shiny_FARMAP.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">FAR map</p>
 </div>
 
 
@@ -79,6 +87,8 @@ The panel of **Isotopomers** show all possible isotopomers and their structure a
 
 <div style="text-align: center;">
   ![Isotopomers](../man/figures/msip_shiny_isotopomers.png){width=100%}
+  <br>
+  <p style="font-size: 10px;">Isotopomers</p>
 </div>
 
 
@@ -87,7 +97,7 @@ The panel of **Isotopomers** show all possible isotopomers and their structure a
 
 
 
-The left table show all possible isotopomers and their probability (proportion in the isotopologue). The probability are divided equally from FSIS if some of isotopomers are mixed in one FSIS (FSIS is isotopomers can not be discriminated due to insufficient fragments information, see [Isotopomers analysis](articles/intro.html#isotopomers-analysis) for more detail). 
+The left table show all possible isotopomers and their probability (proportion in the isotopologue). The probability are divided equally from FSIS if some of isotopomers are mixed in one FSIS (FSIS is isotopomers that can not be discriminated due to insufficient fragments information, see [Isotopomers analysis](articles/intro.html#isotopomers-analysis) for more detail). 
 
 The right panel show structure of selected isotopomer, the border-highlight indicate which atoms labeled in this isotopomer.
 
@@ -101,18 +111,22 @@ The atom label probabilities are integrated from multiple isotopmers.
 
 <div style="text-align: center;">
   ![Atom label probability](../man/figures/msip_shiny_atom_prob.png){width=80%}
+  <br>
+  <p style="font-size: 10px;">Atom label probability</p>
 </div>
 
 ### Natural distribution
 
 This panel show the correlation between MSIP-predicted probability and natural-distributed ratio of FSIS.
 
-If the the MS2 data is totally contributed by natural isotopologues (such as acquired from non-traced sample), it should containing all possible isotopomers with equal probability. Therefore the probability of FSIS should be determined by the fraction of isotopomers count. This feature could be utilized for MSIP validation.
+If  the MS2 data is totally contributed by natural isotopologues (such as acquired from non-traced sample), it should containing all possible isotopomers with equal probability. Therefore the probability of FSIS should be determined by the fraction of isotopomers count. This feature could be utilized for MSIP validation.
 <!-- see [MSIP validation](articles/msip_validation.html) for more detial -->
 
 
 <div style="text-align: center;">
   ![Natural distribution](../man/figures/msip_shiny_natural.png){width=60%}
+  <br>
+  <p style="font-size: 10px;">Natural distribution</p>
 </div>
 
 
